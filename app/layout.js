@@ -1,24 +1,17 @@
-import { Quicksand } from 'next/font/google';
-import ScrollObserver from '../components/ScrollObserver/ScrollObserver';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
-const quicksand = Quicksand({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-rounded',
-});
-
 export const metadata = {
-  title: 'Dra. Catherine Fuchs | Ultrassonografia em Rio Verde',
-  description: 'Médica especialista em Radiologia e Diagnóstico por Imagem.',
+  title: 'Dra. Catherine Fuchs | Radiologia & Diagnóstico por Imagem',
+  description: 'Especialista em ultrassonografia para a Saúde da Mulher, Medicina Fetal e Mapeamento de Endometriose.',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className={quicksand.variable}>
+    <html lang="pt-BR">
       <body>
-        <ScrollObserver />
         {children}
+        <Analytics /> {/* <-- Insere aqui */}
       </body>
     </html>
   );
