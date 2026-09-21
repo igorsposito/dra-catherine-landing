@@ -1,12 +1,6 @@
-import { Plus_Jakarta_Sans } from 'next/font/google'; // Ou a fonte que vocês estavam usando no projeto
+// app/layout.jsx
 import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
-
-const fontMain = Plus_Jakarta_Sans({ 
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-main',
-});
 
 export const metadata = {
   title: 'Dra. Catherine Fuchs | Radiologia & Diagnóstico por Imagem',
@@ -15,8 +9,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className={fontMain.variable}>
-      <body style={{ fontFamily: 'var(--font-main), sans-serif' }}>
+    <html lang="pt-BR">
+      <body>
         {children}
         <Analytics />
       </body>
