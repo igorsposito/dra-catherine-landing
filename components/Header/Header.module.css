@@ -1,0 +1,186 @@
+/* components/Header/Header.module.css */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(250, 247, 245, 0.95);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(133, 82, 115, 0.1);
+  padding: 1rem 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark, #2D262B);
+  letter-spacing: -0.01em;
+}
+
+.sub {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--secondary-rose, #C08092);
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-dark, #2D262B);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--primary-plum, #855273);
+}
+
+.desktopCta {
+  display: flex;
+}
+
+.ctaButton {
+  background-color: var(--primary-plum, #855273);
+  color: #FFFFFF;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(133, 82, 115, 0.2);
+  transition: all 0.25s ease;
+}
+
+.ctaButton:hover {
+  background-color: var(--primary-plum-dark, #5D3B53);
+  transform: translateY(-1px);
+}
+
+/* ====================================================
+   MENU SANDUÍCHE & MOBILE (FUNDO ROXO FIXO NO CELULAR)
+==================================================== */
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--text-dark, #2D262B);
+  cursor: pointer;
+  padding: 0.2rem;
+}
+
+/* Menu Mobile Gaveta */
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  background: radial-gradient(
+    circle at 50% 20%,
+    #8A5875 0%,
+    #6B3F5A 50%,
+    #4A283E 100%
+  );
+  animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.mobileMenu a {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobileMenu a:hover {
+  color: #FFFFFF;
+}
+
+.mobileCta {
+  background-color: #FFFFFF !important;
+  color: var(--primary-plum-dark, #4A283E) !important;
+  text-align: center;
+  padding: 0.9rem !important;
+  border-radius: 12px;
+  font-weight: 700 !important;
+  margin-top: 0.5rem;
+  border-bottom: none !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* REGRAS EXCLUSIVAS PARA O MODO MOBILE (TELA < 968px) */
+@media (max-width: 968px) {
+  .nav, .desktopCta {
+    display: none;
+  }
+  
+  .hamburger {
+    display: block;
+    color: #FFFFFF; /* Ícone do menu sanduíche em branco */
+  }
+
+  /* Header inteiro com o fundo roxo/ameixa imersivo no celular */
+  .header {
+    background: radial-gradient(
+      circle at 50% 20%,
+      #8A5875 0%,
+      #6B3F5A 50%,
+      #4A283E 100%
+    );
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  /* Textos da marca em branco no celular */
+  .name {
+    color: #FFFFFF;
+  }
+
+  .sub {
+    color: #E2B0C4;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
+}

@@ -1,0 +1,147 @@
+/* ====================================================
+   SEÇÃO SOBRE (ABOUT) - ESTILOS COMPLETOS & RESPONSIVOS
+==================================================== */
+
+.section {
+  padding: 6rem 1.5rem;
+  background-color: var(--bg-white, #FFFFFF);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.imageCol {
+  width: 100%;
+}
+
+.imageFrame {
+  border-radius: var(--radius-card, 24px);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft, 0 20px 40px rgba(45, 38, 43, 0.08));
+  border: 1px solid var(--border-light, rgba(133, 82, 115, 0.1));
+  background-color: #FAF7F5;
+}
+
+.imageFrame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.imageFrame img:hover {
+  transform: scale(1.02);
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  color: var(--secondary-rose, #C08092);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-plum, #855273); /* Nome em roxo */
+  margin: 0 0 0.3rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.crm {
+  color: var(--text-muted, #6E636A);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.paragraph {
+  color: var(--text-dark, #2D262B);
+  margin-bottom: 1.1rem;
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+/* Termos em negrito (strong) destacados em roxo */
+.paragraph strong {
+  color: var(--primary-plum, #855273);
+  font-weight: 700;
+}
+
+.statsGrid {
+  display: flex;
+  gap: 3rem;
+  margin-top: 1.5rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--border-light, rgba(133, 82, 115, 0.15));
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  display: block;
+  font-family: var(--font-heading, inherit);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary-plum, #855273);
+  line-height: 1.1;
+  margin-bottom: 0.2rem;
+}
+
+.statLabel {
+  font-size: 0.82rem;
+  color: var(--text-muted, #6E636A);
+  font-weight: 500;
+}
+
+/* ====================================================
+   RESPONSIVIDADE (MOBILE & TABLET)
+==================================================== */
+
+@media (max-width: 968px) {
+  .section {
+    padding: 3.5rem 1rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: left; /* Mantém o texto alinhado à esquerda para leitura fluida no Sobre */
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .paragraph {
+    font-size: 0.98rem;
+  }
+
+  .statsGrid {
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+
+  .statNumber {
+    font-size: 1.9rem;
+  }
+}

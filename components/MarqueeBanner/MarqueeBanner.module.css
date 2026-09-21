@@ -1,0 +1,61 @@
+/* components/MarqueeBanner/MarqueeBanner.module.css */
+
+.bannerContainer {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--primary-plum); /* #855273 */
+  color: #ffffff;
+  padding: 1.8rem 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  
+  /* CRIA A CURVA DA TARJA ROXA NA BORDA SUPERIOR SEM SOBRAS BRANCAS */
+  clip-path: path("M 0 15 L 0 100 L 100% 100 L 100% 15 L calc(45% + 55px) 15 C calc(45% + 30px) 15, calc(45% + 20px) 0, 45% 0 C calc(45% - 20px) 0, calc(45% - 30px) 15, calc(45% - 55px) 15 Z");
+  
+  /* Caso queira um método alternativo com máscara ultra-compatível: */
+  margin-top: -15px; 
+  box-shadow: 0 10px 30px rgba(93, 59, 83, 0.15);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 55s linear infinite;
+  white-space: nowrap;
+}
+
+.track:hover {
+  animation-play-state: paused;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.itemText {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.dot {
+  color: var(--secondary-rose);
+  font-size: 1.3rem;
+  line-height: 0;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

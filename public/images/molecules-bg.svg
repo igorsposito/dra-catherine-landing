@@ -1,0 +1,27 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Linhas de conexão da rede molecular -->
+  <path d="M150 150 L280 220 L400 160 L520 250 L650 180" stroke="#855273" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4"/>
+  <path d="M280 220 L250 360 L380 440 L500 380 L520 250" stroke="#855273" stroke-width="1.5" opacity="0.3"/>
+  <path d="M380 440 L350 580 L480 660 L600 590 L500 380" stroke="#855273" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.35"/>
+  <path d="M400 160 L480 80 L620 110 L650 180" stroke="#855273" stroke-width="1.5" opacity="0.25"/>
+
+  <!-- Átomos / Células principais -->
+  <circle cx="150" cy="150" r="8" fill="#855273" opacity="0.3"/>
+  <circle cx="280" cy="220" r="14" fill="#855273" opacity="0.25"/>
+  <circle cx="280" cy="220" r="6" fill="#855273" opacity="0.6"/>
+  
+  <circle cx="400" cy="160" r="10" fill="#C08092" opacity="0.4"/>
+  <circle cx="520" cy="250" r="18" fill="#855273" opacity="0.15"/>
+  <circle cx="520" cy="250" r="8" fill="#855273" opacity="0.5"/>
+  
+  <circle cx="650" cy="180" r="12" fill="#C08092" opacity="0.3"/>
+  <circle cx="250" cy="360" r="9" fill="#855273" opacity="0.35"/>
+  
+  <circle cx="380" cy="440" r="22" fill="#855273" opacity="0.12"/>
+  <circle cx="380" cy="440" r="9" fill="#855273" opacity="0.5"/>
+  
+  <circle cx="500" cy="380" r="15" fill="#C08092" opacity="0.25"/>
+  <circle cx="350" cy="580" r="11" fill="#855273" opacity="0.3"/>
+  <circle cx="480" cy="660" r="16" fill="#855273" opacity="0.2"/>
+  <circle cx="600" cy="590" r="10" fill="#C08092" opacity="0.35"/>
+</svg>

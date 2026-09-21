@@ -1,0 +1,228 @@
+/* components/Footer/Footer.module.css */
+
+.footer {
+  /* Fundo Degradê Roxo / Ameixa Imersivo */
+  background: radial-gradient(
+    circle at 50% 20%,
+    #8A5875 0%,
+    #6B3F5A 50%,
+    #4A283E 100%
+  );
+  color: #FFFFFF;
+  padding-top: 4.5rem;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 3rem;
+}
+
+@media (max-width: 968px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* COLUNA 1: MARCA */
+
+.brandTitle h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 0.3rem 0;
+}
+
+.brandSubtitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #E2B0C4;
+  display: block;
+  text-transform: uppercase;
+}
+
+.brandDesc {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 1.1rem 0 1.6rem 0;
+  line-height: 1.55;
+  max-width: 380px;
+}
+
+.instaPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.55rem 1.2rem;
+  border-radius: 30px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.instaPill:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #E2B0C4;
+  transform: translateY(-2px);
+}
+
+/* COLUNAS 2 E 3: TITULOS E LISTAS */
+
+.colTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #E2B0C4;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.infoList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.infoList a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.infoList a:hover {
+  color: #FFFFFF;
+}
+
+.icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* BARRA INFERIOR DE COPYRIGHT DEGRADÊ ESCURO */
+
+.bottomBar {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 1.2rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bottomContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .bottomContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+}
+
+.copyright {
+  margin: 0;
+}
+
+.devBy {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.agaveLink {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.agaveLink:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.agaveLogoImg {
+  height: 22px;
+  width: auto;
+  display: block;
+}
+
+.agaveFallbackText {
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 0.9rem;
+}
+
+.agaveFallbackText span {
+  color: #E2B0C4;
+}
+
+/* BOTÃO FLUTUANTE DO WHATSAPP */
+
+.whatsappFloat {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: pulseGlow 2.5s infinite;
+}
+
+.whatsappFloat:hover {
+  transform: scale(1.1) translateY(-4px);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+  background-color: #20BA5A;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}

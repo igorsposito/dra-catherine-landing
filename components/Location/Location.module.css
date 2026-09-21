@@ -1,0 +1,385 @@
+/* components/Location/Location.module.css */
+
+.locationSection {
+  padding: 6rem 1.5rem;
+  background-color: var(--bg-cream, #FAF7F5);
+  color: var(--text-dark, #2D262B);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3rem auto;
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--secondary-rose, #C08092);
+  margin-bottom: 0.6rem;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: 400; /* Parte normal em peso regular */
+  color: var(--text-dark, #2D262B);
+  line-height: 1.15; /* Reduzido o entrelinha para aproximar as frases */
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+.highlight {
+  font-weight: 700;
+  color: var(--primary-plum, #855273);
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--text-muted, #6E636A);
+  line-height: 1.5;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* TOP GRID: FAQ + FORM */
+
+.topGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+/* ESTILOS DA MENSAGEM DE SUCESSO APÓS O ENVIO */
+
+.successBox {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.successIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--primary-plum, #855273);
+  color: #FFFFFF;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 8px 20px rgba(133, 82, 115, 0.3);
+}
+
+.successTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark, #2D262B);
+  margin-bottom: 0.6rem;
+}
+
+.successText {
+  font-size: 0.95rem;
+  color: var(--text-muted, #6E636A);
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 968px) {
+  .topGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sectionBlockTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-dark, #2D262B);
+  margin-bottom: 1.5rem;
+}
+
+/* ACCORDION FAQ EM CARDS BRANCOS */
+
+.faqAccordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faqCard {
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid rgba(133, 82, 115, 0.12);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faqCard:hover {
+  border-color: rgba(133, 82, 115, 0.3);
+  box-shadow: 0 8px 25px rgba(93, 59, 83, 0.08);
+}
+
+.faqOpen {
+  border-color: var(--primary-plum, #855273);
+  box-shadow: 0 8px 25px rgba(93, 59, 83, 0.08);
+}
+
+.faqHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faqQuestion {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark, #2D262B);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.faqToggleIcon {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-plum, #855273);
+  line-height: 1;
+}
+
+.faqBody {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(133, 82, 115, 0.08);
+}
+
+.faqAnswer {
+  font-size: 0.9rem;
+  color: var(--text-muted, #6E636A);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* FORMULÁRIO EM CARD BRANCO ELEGANTE */
+
+.formCol {
+  width: 100%;
+}
+
+.formCard {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(133, 82, 115, 0.12);
+  box-shadow: 0 10px 30px rgba(93, 59, 83, 0.06);
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark, #2D262B);
+  margin-bottom: 0.3rem;
+}
+
+.formSubtitle {
+  font-size: 0.88rem;
+  color: var(--text-muted, #6E636A);
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-dark, #2D262B);
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1.5px solid #EAE2E7;
+  background-color: #FAF7F5;
+  font-size: 0.9rem;
+  color: var(--text-dark, #2D262B);
+  outline: none;
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #A0959C;
+}
+
+.select option {
+  background-color: #FFFFFF;
+  color: var(--text-dark, #2D262B);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--primary-plum, #855273);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(133, 82, 115, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.submitCtaBtn {
+  margin-top: 0.5rem;
+  width: 100%;
+  background: var(--primary-plum, #855273);
+  color: #FFFFFF;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 20px rgba(133, 82, 115, 0.25);
+}
+
+.submitCtaBtn:hover {
+  transform: translateY(-2px);
+  background: var(--primary-plum-dark, #5D3B53);
+  box-shadow: 0 12px 28px rgba(133, 82, 115, 0.35);
+}
+
+/* FAIXA INFERIOR DO MAPA (BANNER SOLIMAR) */
+
+.mapBannerCard {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid rgba(133, 82, 115, 0.12);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(93, 59, 83, 0.06);
+}
+
+@media (max-width: 860px) {
+  .mapBannerCard {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mapBannerInfo {
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.mapIconCircle {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(133, 82, 115, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.mapBannerTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark, #2D262B);
+  margin-bottom: 0.3rem;
+}
+
+.mapBannerAddress {
+  font-size: 0.92rem;
+  color: var(--text-muted, #6E636A);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.mapHours {
+  color: var(--primary-plum, #855273);
+  font-weight: 600;
+}
+
+.mapBannerIframeWrapper {
+  height: 180px;
+  position: relative;
+  width: 100%;
+}
+
+.mapsExternalBtn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  background: var(--primary-plum, #855273);
+  color: #FFFFFF;
+  padding: 0.35rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.mapsExternalBtn:hover {
+  transform: scale(1.05);
+}
